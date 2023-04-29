@@ -40,11 +40,7 @@ const Login = () => {
         </div>
         <div className="mb-6 relative">
           <label htmlFor="password" className="block text-gray-700 font-bold mb-2">Password</label>
-          {
-            open ?
-              <input type="text" name="password" id="password" className="border rounded-lg py-2 px-3 w-full" required />
-              : <input type="password" name="password" id="password" className="border rounded-lg py-2 px-3 w-full" required />
-          }
+          <input type={open? 'text' : 'password'} name="password" id="password" className="border rounded-lg py-2 px-3 w-full" required />
           <span onClick={() => setOpen(!open)}>
             {
               open ?
